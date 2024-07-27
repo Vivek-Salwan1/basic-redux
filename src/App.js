@@ -1,18 +1,14 @@
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux'
-import Hey from './componants/hey';
-import { decrement, increment } from './redux/conterSlice';
 import { increseLevel, increseScore } from './redux/gameSlice';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 function App() {
   const dispatch = useDispatch();
-  const counterValue = useSelector((state) => state.counter.value);
 
   const score = useSelector((state)=> state.game.scorecard)
   const level = useSelector((state) => state.game.level)
 
-  const previousScoreRef = useRef(score);
   useEffect(()=>{
   
     if(score > 10){
@@ -20,18 +16,12 @@ function App() {
     }
 
 
-  },[score,])
+  },[score, dispatch])
 
   return (
     <div className="App">
      
-      {/* <div className="countere">
-        <button onClick={()=> dispatch(increment())}>Increment</button>
-        <h1>Count is {counterValue} </h1>
-        <button onClick={()=> dispatch(decrement())}>Decrement</button>
-      </div>
-    
-      <Hey/> */}
+   
       <textarea  cols={20} rows={15} name="" id="" placeholder='Start typing to increse your score'
        onKeyDown={()=> dispatch(increseScore())}></textarea>
 
