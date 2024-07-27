@@ -1,0 +1,20 @@
+ <!-- creating store -->
+- npm i react-redux and @reduxjs/toolkit
+- create new folder for redux files
+- create redux store using configureStore method of toolkit and store it in variable and export the store
+- create reducer in store
+
+<!-- creating slice -->
+- create slice for counter
+- create new file counterSlice and create new slice using createSlice method[name, initial state->value, reducers:{functions}]
+- extract the actions from slice using sliceName.actions method
+- export sliceName.reducer
+
+- wrap the App comp. inside store provider
+
+<!-- using in compts -->
+- import useDispatch and useSelector from react-redux
+- const dispatch = useDispatch..... calling dispatcher
+- select state value from store using useSelector and store in const var.
+- use const var.
+
