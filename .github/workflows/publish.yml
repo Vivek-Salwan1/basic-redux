@@ -16,6 +16,11 @@ jobs:
       - name: Install all dependencies
         run: npm install
 
+      - name: npm test:ci
+        run: npm run test:ci
+        env:
+         CI: false
+
       - name: Build
         run: npm run build # The build command of your project
 
