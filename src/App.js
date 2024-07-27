@@ -29,7 +29,7 @@ function App() {
       <button onClick={() => dispatch(increseScore(5))}>Play to increase score</button>
       <h3>Typing Score: {score}</h3>
       <h3>Level :{level}</h3>
-      <button onClick={() => dispatch(increseLevel())}>Next level</button>
+      <button onClick={() => dispatch(increseLevel())}>hey this is level</button>
      
     </div>
 
