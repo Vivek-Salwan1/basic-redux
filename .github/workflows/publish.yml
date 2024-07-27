@@ -19,7 +19,7 @@ jobs:
       - name: npm test:ci
         run: npm run test:ci
         env:
-         CI: false
+         CI: ""
 
       - name: Build
         run: npm run build # The build command of your project
